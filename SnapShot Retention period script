@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     from datetime import date
     re = boto3.resource('ec2',aws_access_key_id='YOUR ACESS KEY ', aws_secret_access_key='YOUR SECRET KEY',region_name='REGION NAME')
     c = boto3.client('ec2',aws_access_key_id='YOUR ACESS KEY', aws_secret_access_key='YOUR SECRET KEY',region_name='REGION NAME')
-    snapid = c.describe_snapshots(OwnerIds = ['448674636570'])
+    snapid = c.describe_snapshots(OwnerIds = ['YOUR ACCOUNT ID'])
     L = len(snapid['Snapshots'])
     i = 0
     los = []
