@@ -8,3 +8,4 @@ for i in range(L_o_C):
 	k = obj['Contents'][i]['Key']
 	keynames.append( k )
 	i = i + 1 
+keynames[]
