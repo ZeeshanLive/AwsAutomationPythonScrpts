@@ -30,7 +30,7 @@ def lambda_handler(event, context):
         ST = date( year , month , day )
         diff = (CurrentDate()-ST)
         DiffDays = diff.days
-        if (DiffDays == 2):
+        if (DiffDays == 2):  #mention the number of days old snapshot you want to delete 
             out = n.delete()
             
           
