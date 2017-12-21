@@ -1,5 +1,4 @@
 def lambda_handler(event, context):
-    # TODO implement
     import datetime
     import time
     import boto3
@@ -61,5 +60,5 @@ def lambda_handler(event, context):
 		    print (out)
         
         
-#NOTE : script will compare the image id date with the host server or lambda date .. please make sure that your device running with coorect date  
+#NOTE : script will compare the image id date with the host server or lambda date .. please make sure that your device running with correct date  
 
