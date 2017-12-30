@@ -24,7 +24,7 @@ def lambda_handler(event, context):
               re = dbsnap.delete_db_snapshot(DBSnapshotIdentifier=SID)        
         i = i + 1
  
-""" ******* FOR WINDOWS / LINUX other work stations ************ """""""
+""" ******* FOR WINDOWS / LINUX other work stations ************ """
 
 import boto3
 import datetime
