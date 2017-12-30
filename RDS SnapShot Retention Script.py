@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     DbId =[]
     i = 0 
     while ( i < LengthOfSnaps):
-        if (DbSnapList['DBSnapshots'][i]['SnapshotType'] == 'manual'):  # IF you are going for automated Snapshots replace "manual" to "automated"
+        if (DbSnapList['DBSnapshots'][i]['SnapshotType'] == 'manual') and (DbSnapList['DBSnapshots'][i]['DBInstanceIdentifier'] == 'mydb2'):   # IF you are going for automated Snapshots replace "manual" to "automated and 'mydb2' to your dbidentifier i.e dbname"
             SID = DbSnapList['DBSnapshots'][i]['DBSnapshotIdentifier']
             DbId.append(SID)
             a = DbSnapList['DBSnapshots'][i]['InstanceCreateTime']
@@ -36,7 +36,7 @@ LengthOfSnaps = len(DbSnapList['DBSnapshots'])
 DbId =[]
 i = 0 
 while ( i < LengthOfSnaps):
-	if (DbSnapList['DBSnapshots'][i]['SnapshotType'] == 'manual'):    # IF you are going for automated Snapshots replace "manual" to "automated"
+	if (DbSnapList['DBSnapshots'][i]['SnapshotType'] == 'manual') and (DbSnapList['DBSnapshots'][i]['DBInstanceIdentifier'] == 'mydb2'):   # IF you are going for automated Snapshots replace "manual" to "automated and 'mydb2' to your dbidentifier i.e dbname"
 		SID = DbSnapList['DBSnapshots'][i]['DBSnapshotIdentifier']
 		DbId.append(SID)
 		a = DbSnapList['DBSnapshots'][i]['InstanceCreateTime']
