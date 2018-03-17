@@ -7,7 +7,7 @@ while i < len(DBId):
 	DbObj = rdsobj.describe_db_instances(DBInstanceIdentifier=DBId[i])
 	StatusOfDb = DbObj['DBInstances'][i]['DBInstanceStatus']
 	if StatusOfDb == 'available':
-		se = client.stop_db_instance(DBInstanceIdentifier=DBId[i])
+		se = rdsobj.stop_db_instance(DBInstanceIdentifier=DBId[i])
 	else:
-		se = client.start_db_instance(DBInstanceIdentifier=DBId[i])
+		se = rdsobj.start_db_instance(DBInstanceIdentifier=DBId[i])
 	i = i+1
