@@ -9,4 +9,3 @@ for a in DBId:
 		se = rdsobj.stop_db_instance(DBInstanceIdentifier=a)
 	else:
 		se = rdsobj.start_db_instance(DBInstanceIdentifier=a)
-	i = i+1
