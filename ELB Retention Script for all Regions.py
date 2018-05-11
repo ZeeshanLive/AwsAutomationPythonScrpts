@@ -35,10 +35,10 @@ for a in currentregions:
 				DiffDays = diff.days
 				AgeOfLoadBalancer = DiffDays
 				if AgeOfLoadBalancer > 0:  #Replace the no of days old elb's you wanna delete .. 
-					response = client.delete_load_balancer(LoadBalancerName=LoadbalancerNam)
+					response = client.delete_load_balancer(LoadBalancerName=LoadbalancerName)
 				FinalData = [ LoadbalancerName,LoadBalancerDnsName , LoadBalancerCreatedDate,RegionOfLoadBalancer,AgeOfLoadBalancer]
 				csvdata.append(FinalData)
-				response = client.delete_load_balancer(LoadBalancerName=LoadbalancerName)
+				
             i += 1
 df = pd.DataFrame(csvdata, columns=[ "LoadBalancerName ","LoadBalancerDnsName" , "LoadBalancerCreatedDate","RegionOfLoadBalancer","AgeOfLoadBalancer"])
 
